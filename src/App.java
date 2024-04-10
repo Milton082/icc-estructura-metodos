@@ -1,5 +1,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
+        
+        
+
+
 
         // Crear la instancia de la (clase u objetos) Metodos Ordemaniento
         MetodosOrdenamiento metodosOrdenamiento = new MetodosOrdenamiento();
@@ -7,7 +11,7 @@ public class App {
         int[] numeros = { 30, 7, 12, 5 };
         metodosOrdenamiento.imprime(numeros);
 
-        int[] arregloOrdenado = metodosOrdenamiento.sortByBubble(numeros);
+        int[] arregloOrdenado = metodosOrdenamiento.sortByBubble(numeros, true);
         metodosOrdenamiento.imprime(arregloOrdenado);
     }
 }

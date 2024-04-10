@@ -3,17 +3,26 @@ public class MetodosOrdenamiento {
     // 1. Metodo que devuelve un arreglo
     // de enteros por metodo Burbuja
 
-    public int[] sortByBubble(int[] arreglo) {
+    public int[] sortByBubble(int[] arreglo, boolean logs) {
         int tamano = arreglo.length;
         for (int i = 0; i < tamano; i++) {
-            System.out.println();
+            if (logs) {
+                System.out.println("\nPasado numero " + i);
+            }
 
             for (int j = i + 1; j < tamano; j++) {
+                if (logs) {
+                    System.out.println("i= " + arreglo[i] + " j= " + arreglo[j]);
+                }
                 if (arreglo[i] > arreglo[j]) {
+                    System.out.println(" - Si es mayor asi que cambio ");
                     int temporal = arreglo[i];
                     arreglo[i] = arreglo[j];
                     arreglo[j] = temporal;
-                    System.out.print("");
+                    if (logs) {
+                        System.out.print("");
+                        imprime(arreglo);
+                    }
                 }
             }
 

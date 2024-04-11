@@ -61,10 +61,17 @@ public class App {
                     //else cond -> false
                     //metodos.sortByBubble(arreglo , cond);
 
+                    String opcion = scanner.nextLine();
+                    boolean cond;
+                    if (opcion.equals("A")){
+                        cond = true;
 
+                    } else{
+                        cond = false;
+                    }
                     int [] arregloOrdenado = metodos.sortByBubble(arreglo, false);
                     metodos.imprime(arregloOrdenado);
-                    
+
 
 
                     break;
